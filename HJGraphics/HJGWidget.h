@@ -17,6 +17,7 @@
 #include <QFileDialog>
 #include <QFileInfo>
 #include <QDir>
+
 class HJGWidget : public QOpenGLWidget, protected QtOpenGLBaseClass
 {
   Q_OBJECT

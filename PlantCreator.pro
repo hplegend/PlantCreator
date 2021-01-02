@@ -4,9 +4,9 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui widgets
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 5): QT += widgets
 
 TARGET = PlantCreator
 TEMPLATE = app
@@ -74,15 +74,18 @@ HEADERS += \
 
 FORMS += \
         mainwindow.ui
-INCLUDEPATH += /usr/local/include\
-			   HJGraphics\
-			   include
 
-LIBS += -L/usr/local/Cellar/opencv@2/2.4.13.7_2/lib \
-	 -lopencv_core \
-	 -lopencv_highgui \
-	 -lopencv_imgproc \
-	 /usr/local/Cellar/assimp/4.0.1/lib/libassimp.4.0.1.dylib\
+INCLUDEPATH += D:/hplegend/OpenCV/opencv/build/include \
+               D:/hplegend/OpenCV/opencv/build/include/opencv2 \
+                           HJGraphics \
+                           include \
+
+
+LIBS += -LD:/hplegend/OpenCV/opencv/build/x64/vc12/lib \
+         -lopencv_core2413d \
+         -lopencv_highgui2413d \
+         -lopencv_imgproc2413d \
+         D:/hplegend/codes/HJGraphic/HJGraphics/lib/assimp-vc141-mt.lib \
 
 RESOURCES += \
     src.qrc

@@ -3,6 +3,9 @@
 //
 #define STB_IMAGE_IMPLEMENTATION
 #include "ElementObjects.h"
+#include <QOpenGLShaderProgram>
+#include <QOpenGLFunctions_3_3_Core>
+#include <QOpenGLFunctions_4_5_Core>
 /*
  * Implement of Coordinate Object
  */
@@ -317,7 +320,7 @@ void HJGraphics::Cylinder::writeVerticesData() {
 	//No.partition and No.2*partition+1 are center points
 	constexpr int VERTEX_FLOAT_NUM=8;//how many float values a vertex has
 	GLfloat *data=new GLfloat[(2*(partition+1)+4*partition)*VERTEX_FLOAT_NUM];
-	const uint stride=(partition+1)*VERTEX_FLOAT_NUM;//rightPoint[x]=leftPoint[x]+stride
+    const int stride=(partition+1)*VERTEX_FLOAT_NUM;//rightPoint[x]=leftPoint[x]+stride
 	GLfloat *leftFan,*rightFan;
 	leftFan=data;
 	rightFan=data+stride;

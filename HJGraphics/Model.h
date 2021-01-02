@@ -21,7 +21,7 @@ namespace HJGraphics {
 		glm::vec3 bitangent;
 	};
 
-	class Mesh:public GeometryObject{
+    class Mesh:public GeometryObject{
 	public:
 		std::vector<GLuint> indices;
 		std::vector<MeshVertex> vertices;

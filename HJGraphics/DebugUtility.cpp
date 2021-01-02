@@ -2,6 +2,7 @@
 // Created by 何振邦(m_iDev_0792) on 2018/12/27.
 //
 #include "DebugUtility.h"
+
 void getUniformBlockOffsets(GLuint shaderID,int length,const char* uniformNames[]){
 	GLuint *uniformIndices=new GLuint[length];
 	GLint *uniformOffsets=new GLint[length];

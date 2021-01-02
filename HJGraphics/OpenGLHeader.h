@@ -9,20 +9,23 @@
 #ifndef HJGRAPHICS_OPENGLHEADER_H
 #define HJGRAPHICS_OPENGLHEADER_H
 //in which way do you want to access OpenGL API?
-#define HJGRAPHICS_QT
+// #define HJGRAPHICS_QT
 
-#ifdef HJGRAPHICS_GLAD
-#include "glad/glad.h"
-#endif
+//#ifdef HJGRAPHICS_GLAD
+//#include "glad/glad.h"
+// #endif
 
-#ifdef HJGRAPHICS_OPENGL_DIRECT_ACCESS
-#include <OpenGL/gl3>
-#endif
+//#ifdef HJGRAPHICS_OPENGL_DIRECT_ACCESS
+//#include <OpenGL/gl3>
+//#endif
 
-#ifdef HJGRAPHICS_QT
+//#ifdef HJGRAPHICS_QT
+#include <QOpenGLWidget>
+#include <QOpenGLFunctions>
+#include <QOpenGLShaderProgram>
 #include <QOpenGLFunctions_3_3_Core>
 #include <QDebug>
 using QtOpenGLBaseClass = QOpenGLFunctions_3_3_Core;
-#endif
+//#endif
 
 #endif //HJGRAPHICS_OPENGLHEADER_H
